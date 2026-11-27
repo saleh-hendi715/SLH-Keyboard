@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/kbRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/slh_kb_dark"
+    android:orientation="vertical"
+    android:paddingStart="4dp"
+    android:paddingTop="6dp"
+    android:paddingEnd="4dp"
+    android:paddingBottom="8dp">
+
+    <!-- شريط الأدوات العلوي -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <TextView
+            android:id="@+id/btnToolKb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="⌨️"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnToolEmoji"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="😀"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnToolSymbols"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="✦"
+            android:textColor="@color/slh_gold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnToolClip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="📋"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnToolSig"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🪪"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnToolTheme"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🌓"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnToolSettings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="⚙️"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- شريط الاقتراحات السريعة -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/suggestionsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp" />
+    </HorizontalScrollView>
+
+    <!-- حاوية مفاتيح لوحة المفاتيح -->
+    <LinearLayout
+        android:id="@+id/keysContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <!-- اللوحة الثانوية (الإيموجي / الرموز / الحافظة) -->
+    <ScrollView
+        android:id="@+id/secondaryPanelScroll"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/secondaryPanelContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp" />
+    </ScrollView>
+
+</LinearLayout>
